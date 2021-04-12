@@ -31,7 +31,7 @@ const Login = () => {
         </Card.Header>
         <Card.Body>
           <form onSubmit={handleSubmit}>
-            {error && <Alert variant="danger">{error}</Alert>}
+            {error && <Alert variant="danger">error</Alert>}
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">
                 Email address

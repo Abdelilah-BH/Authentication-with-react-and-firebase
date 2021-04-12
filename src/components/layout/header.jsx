@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useAuth } from "../../contexts/auth";
 import { Link } from "react-router-dom";
 import search from "bootstrap-icons/icons/search.svg";
+import { Alert } from "react-bootstrap";
 
 const Header = () => {
   const [error, setError] = useState("");
@@ -21,6 +22,7 @@ const Header = () => {
           Find My Book
         </Link>
         <form className="d-flex flex-fill">
+          {error && <Alert variant="danger">error</Alert>}
           <div className="input-group">
             <input
               type="text"

@@ -9,6 +9,7 @@ import "bootstrap/dist/js/bootstrap.bundle";
 import PrivateRoute from "./routes/private-route";
 import AuthProvider from "./contexts/auth";
 import { Container } from "react-bootstrap";
+import ForgotPassword from "./pages/forgot-password";
 
 function App() {
 
@@ -30,6 +31,9 @@ function App() {
               </Route>
               <Route path="/register" exact>
                 <Register />
+              </Route>
+              <Route path="/reset-password" exact>
+                <ForgotPassword />
               </Route>
             </Switch>
           </Container>

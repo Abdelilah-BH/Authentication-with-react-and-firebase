@@ -1,16 +1,13 @@
 import { useState, useRef } from "react";
 import { useAuth } from "../contexts/auth";
-import { useLocation, useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Alert, Card } from "react-bootstrap";
 
 const ForgotPassword = () => {
   const [error, setError] = useState();
   const [message, setMessage] = useState();
+  const emailRef = useRef();
   const { resetPassword } = useAuth();
-  let location = useLocation();
-  let history = useHistory();
-  let { from } = location.state || { from: { pathname: "/" } };
 
   const handleSubmit = async (e) => {
     e.preventDefault();

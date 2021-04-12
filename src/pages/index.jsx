@@ -1,8 +1,8 @@
 
-import { useAuth } from "../contexts/auth";
+// import { useAuth } from "../contexts/auth";
 
 const Home = () => {
-  const { user } = useAuth();
+  // const { user } = useAuth();
   return(
     <h1>Page home</h1>
   )
